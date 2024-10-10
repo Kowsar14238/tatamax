@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./home.css">
+    <!--Tailwind-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--DaisyUI-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Flowbite-->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <title>TATAMAX</title>
+</head>
+
+<body>
+    <!-- header -->
+    <header class="bg-[#212B35] mx-auto px-5 py-2">
+        <div class="grid grid-cols-12 justify-between items-center">
+            <div class="logo col-span-3 ms-auto me-20">
+                <img src="images/logo.png" alt="tatamax" class="h-10" />
+            </div>
+            <form class="h-10 col-span-6 bg-white flex items-center rounded-md overflow-hidden">
+                <input type="text" placeholder="Seach on tatamax.com"
+                    class="bg-transparent focus:outline-0 px-5 flex-1" />
+                <button class="h-full px-5 bg-blue-200 hover:bg-blue-600 hover:text-white transition-all duration-300">
+                    <i class="fas fa-search text-xl"></i>
+                </button>
+            </form>
+
+            <div class="col-span-3 flex items-center gap-5 ms-auto">
+                <a href="#"><i class="fas fa-user-circle text-2xl text-white"></i></a>
+                <a class="relative">
+                    <img src="images/shopping-bag.png" alt="tatamax-cart" class="h-6" />
+
+                    <div
+                        class="absolute inline-flex items-center justify-center w-4 h-4 text-xs bg-white rounded-full -top-2 -start-2">
+                        0
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-16">
+            <div>
+                <button class="flex flex-col items-center" type="button" data-drawer-target="drawer-example"
+                    data-drawer-show="drawer-example" aria-controls="drawer-example">
+                    <i
+                        class="fas fa-list-ul bg-white rounded-full w-6 h-6 flex items-center justify-center text-sm"></i>
+                    <span class="text-white text-xs">Menu</span>
+                </button>
+
+                <div id="drawer-example"
+                    class="fixed top-0 left-0 z-40 h-screen p-2 overflow-y-auto transition-transform -translate-x-full bg-white w-96"
+                    tabindex="-1" aria-labelledby="drawer-label">
+                    <div class="flex justify-between items-center px-2 mb-4">
+                        <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example">
+                            <i class="fa-solid fa-chevron-left text-3xl"></i>
+                        </button>
+                        <h1 id="drawer-label" class="text-3xl">Catagories</h1>
+                        <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example">
+                            <i class="fa-solid fa-xmark text-3xl"></i>
+                        </button>
+                    </div>
+
+                    <ul class="sidebar-menu my-3">
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                    </ul>
+
+                    <h1 class="text-3xl">Top Catagories</h1>
+                    <ul class="sidebar-menu my-3">
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+                        </li>
+                    </ul>
+
+                    <h1 class="text-3xl">Top Catagories</h1>
+                    <ul class="sidebar-menu my-3">
+                        <li>
+                            <a href="#"><img src="images/trending.png" alt="" /><span>Sign In</span></a>
+                        </li>
+                    </ul>
+
+                    <a href="#" type="button" class="bg-lime-700 p-2 w-full text-white rounded-md">
+                        <h1 class="text-2xl">Become a Seller</h1>
+                        <span>Create a Tatamax Account</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="main-menu">
+                <ul class="flex text-white">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Trending</a></li>
+                    <li><a href="#">All Brands</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="mx-auto px-10">
+            <!-- banner -->
+            <div class="relative">
+                <!-- carousel -->
+                <div id="controls-carousel" class="relative w-full mt-5" data-carousel="static">
+                    <!-- Carousel wrapper -->
+                    <div class="relative h-[600px] overflow-hidden rounded-lg banner-carousel">
+                        <!-- Item 1 -->
+                        <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                            <a href="#">
+                                <img src="images/banner-img1.jpg"
+                                    class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="..." /></a>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="hidden duration-700 ease-in-out h-full" data-carousel-item="active">
+                            <a href="#"><img src="images/banner-img2.jpg"
+                                    class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="..." /></a>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                            <a href="#">
+                                <img src="images/banner-img3.jpg"
+                                    class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="..." /></a>
+                        </div>
+                        <!-- Item 4 -->
+                        <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+                            <a href="#"><img src="images/banner-img2.jpg"
+                                    class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+                                    alt="..." /></a>
+                        </div>
+                    </div>
+                    <!-- Slider controls -->
+                    <button type="button"
+                        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-prev>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="M5 1 1 5l4 4" />
+                            </svg>
+                            <span class="sr-only">Previous</span>
+                        </span>
+                    </button>
+                    <button type="button"
+                        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                        data-carousel-next>
+                        <span
+                            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2" d="m1 9 4-4-4-4" />
+                            </svg>
+                            <span class="sr-only">Next</span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="grid grid-cols-2 absolute -bottom-80 z-[999] px-5 gap-5">
+                    <div class="grid grid-cols-2 gap-5 h-full">
+                        <a href="#"
+                            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+                            <span
+                                class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+                                Vape</span>
+                            <img src="images/disposable.jpg" alt="" class="object-cover h-full w-full" />
+                        </a>
+                        <a href="#"
+                            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+                            <span
+                                class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+                                Vape</span>
+                            <img src="images/disposable.jpg" alt="" class="object-cover h-full w-full" />
+                        </a>
+                    </div>
+
+                    <div class="flex flex-col gap-5 h-full">
+                        <a href="#"
+                            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+                            <span
+                                class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+                                Vape</span>
+                            <img src="images/health&beauty.jpg" alt="" class="object-cover h-full w-full" />
+                        </a>
+                        <a href="#"
+                            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+                            <span
+                                class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+                                Vape</span>
+                            <img src="images/health&beauty.jpg" alt="" class="object-cover h-full w-full" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Best Sellers Section-->
+        <section class="best-seller mt-96">
+            <div class="flex justify-between itmes-center">
+                <h1 class="basis-1/2 text-2xl font-bold ">Best Sellers <span class="text-gray-600">Our most popular
+                        products based on sales. Updated frequently.</span> </h1>
+                <div class="flex  gap-7 text-gray-500">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <div>
+                <div class="home-products-card p-2 max-w-sm hover:bg-white hover:shadow-lg hover:border-t hover:border-b-0 hover:border-l hover:border-r-0 hover:border-gray-300 relative group text-center">
+                    <a href="#">
+                        <img class="rounded-t-lg" src="./images/demo_img_1.jpg" alt="" />
+                        <!-- Icons to show on hover -->
+                        <div
+                            class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2 p-1 space-x-2">
+
+                            <i class="fa-solid fa-heart text-gray-500 bg-white text-xl p-2 rounded-full hover:text-white hover:bg-blue-600"
+                                data-tooltip="Save to Basket"></i>
+                            <i class="fa-solid fa-arrow-right-arrow-left text-gray-500 bg-white text-xl py-2 px-3 rounded-full hover:text-white hover:bg-blue-600"
+                                data-tooltip="Compare"></i>
+                        </div>
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bloody Mary
+                                BM600 Disposables</h5>
+                        </a>
+                        <div class="flex items-center justify-center text-gray-400">
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <span class="text-black">0</span>
+                        </div>
+                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-red-500">
+                            <i class="fa-solid fa-bangladeshi-taka-sign"></i>2000.25
+                        </p>
+                        <button type="button"
+                            class="text-black text-xl font-bold bg-[#daebf0] hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">
+                            Free UK Delivery
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Top Deal Section-->
+        <section>
+            <div class="flex justify-between itmes-center">
+                <h1 class="basis-1/2 text-2xl font-bold ">Top Deal</h1>
+                <div class="flex  gap-7 text-gray-500">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </div>
+            <div>
+                <div
+                    class="home-products-card p-2 max-w-sm hover:bg-white hover:shadow-lg hover:border-t hover:border-b-0 hover:border-l hover:border-r-0 hover:border-gray-300 relative group text-center">
+                    <a href="#">
+                        <div class="image-container relative">
+                            <img class="rounded-t-lg image-main" src="./images/demo_img_2.jpg" alt="" />
+                            <img class="rounded-t-lg image-hover absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                                src="./images/demo_img_1.jpg" alt="" />
+                        </div>
+
+
+                        <!-- Icons to show on hover -->
+                        <div
+                            class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2 p-1 space-x-2">
+                            <i class="fa-solid fa-heart text-gray-500 bg-white text-xl p-2 rounded-full hover:text-white hover:bg-blue-600"
+                                data-tooltip="Save to Basket"></i>
+                            <i class="fa-solid fa-arrow-right-arrow-left text-gray-500 bg-white text-xl py-2 px-3 rounded-full hover:text-white hover:bg-blue-600"
+                                data-tooltip="Compare"></i>
+                        </div>
+                    </a>
+                    <div class="p-5">
+                        <a href="#">
+                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bloody Mary
+                                BM600 Disposables</h5>
+                        </a>
+                        <div class="flex items-center justify-center text-gray-400">
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <i class="fa-sharp fa-solid fa-star"></i>
+                            <span class="text-black">0</span>
+                        </div>
+                        <div class="flex flex-wrap justify-center items-center gap-2">
+                            <i class="fa-solid fa-lock"></i>
+                            <p>Register to see the wholesale price</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <!--New Itmes Section-->
+        <!-- <section>
+            <h1 class="text-2xl text-center font-bold "> Our hot new releases <br> <span class="text-gray-600">Updated
+                    frequently.</span>
+            </h1>
+            <div>
+                <div
+                    class="bg-[url('https://tatamax.com/public/uploads/all/0fBC7YlSUVwAAAaqU1afEImavPHxxsctqweYQdFa.webp')] bg-cover bg-center h-screen object-cover">
+                    <div
+                        class="home-products-card p-2 max-w-sm hover:bg-white hover:shadow-lg hover:border-t hover:border-b-0 hover:border-l hover:border-r-0 hover:border-gray-300 relative group text-center">
+                        <a href="#">
+                            <img class="rounded-t-lg" src="./images/demo_img_1.jpg" alt="" />
+                            <div
+                                class="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col gap-2 p-1 space-x-2">
+
+                                <i class="fa-solid fa-heart text-gray-500 bg-white text-xl p-2 rounded-full hover:text-white hover:bg-blue-600"
+                                    data-tooltip="Save to Basket"></i>
+                                <i class="fa-solid fa-arrow-right-arrow-left text-gray-500 bg-white text-xl py-2 px-3 rounded-full hover:text-white hover:bg-blue-600"
+                                    data-tooltip="Compare"></i>
+                            </div>
+                        </a>
+                        <div class="p-5">
+                            <a href="#">
+                                <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Bloody
+                                    Mary
+                                    BM600 Disposables</h5>
+                            </a>
+                            <div class="flex items-center justify-center text-gray-400">
+                                <i class="fa-sharp fa-solid fa-star"></i>
+                                <i class="fa-sharp fa-solid fa-star"></i>
+                                <i class="fa-sharp fa-solid fa-star"></i>
+                                <i class="fa-sharp fa-solid fa-star"></i>
+                                <i class="fa-sharp fa-solid fa-star"></i>
+                                <span class="text-black">0</span>
+                            </div>
+                            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-red-500">
+                                <i class="fa-solid fa-bangladeshi-taka-sign"></i>2000.25
+                            </p>
+                            <button type="button"
+                                class="text-black text-xl font-bold bg-[#daebf0] hover:bg-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center">
+                                Free UK Delivery
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        
+
+
+    </main>
+    <footer>
+        <p>footer</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+</body>
+
+</html>

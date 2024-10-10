@@ -1,0 +1,96 @@
+/* menu */
+header {
+  position: sticky;
+  z-index: 9999 !important;
+}
+.main-menu ul li {
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+.main-menu ul li:hover{
+  border: 1px solid white;
+}
+.sidebar-menu li {
+  padding: 6px 5px;
+  border-bottom: 1px solid #fff;
+  border-radius: 3px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sidebar-menu li a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.sidebar-menu li:hover {
+  border: 1px solid #185abc;
+  color: #185abc;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* banner */
+.banner-carousel::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    #ffffff23 70%,
+    white 100%
+  );
+}
+.hot-carousel::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: linear-gradient(to bottom, transparent, white 70%, white 100%);
+}
+
+/* slider-responsive */
+
+.slider-responsive img {
+  padding: 0 5px;
+  border-radius: 10px;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-size: 30px !important;
+  opacity: 0.5 !important;
+  color: rgb(136, 136, 136) !important;
+  box-shadow: 5px 5px 10 px black !important;
+  filter: drop-shadow(5px 5px 10 px black) !important;
+}
+
+.slider-responsive2 .slick-prev,
+.slider-responsive2 .slick-next {
+  top: 0 !important;
+  right: 30px !important;
+  left: auto !important;
+  padding-bottom: 80px !important;
+}
+.slider-responsive2 .slick-prev {
+  margin-right: 40px !important;
+}
+
+.slider-responsive2.hot {
+  padding: 10px;
+  margin-top: -150px;
+  z-index: 99;
+}

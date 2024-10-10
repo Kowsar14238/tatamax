@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- tailwind & flowbite -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+
+  <!-- slick slider -->
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+  <title>TATAMAX</title>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="bg-[#212B35] mx-auto px-5 py-2 h-[14vh]">
+    <div class="grid grid-cols-12 justify-between items-center">
+      <div class="logo col-span-3 ms-auto me-20">
+        <img src="images/logo.png" alt="tatamax" class="h-10" />
+      </div>
+      <form class="h-10 col-span-6 bg-white flex items-center rounded-md overflow-hidden">
+        <input type="text" placeholder="Seach on tatamax.com" class="bg-transparent focus:outline-0 px-5 flex-1" />
+        <button class="h-full px-5 bg-blue-200 hover:bg-blue-600 hover:text-white transition-all duration-300">
+          <i class="fas fa-search text-xl"></i>
+        </button>
+      </form>
+
+      <div class="col-span-3 flex items-center gap-5 ms-auto">
+        <a href="#"><i class="fas fa-user-circle text-2xl text-white"></i></a>
+        <a class="relative cursor-pointer">
+          <img src="images/shopping-bag.png" alt="tatamax-cart" class="h-6" />
+
+          <div
+            class="absolute inline-flex items-center justify-center w-4 h-4 text-xs bg-white rounded-full -top-2 -start-2">
+            0
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-16">
+      <div>
+        <button class="flex flex-col items-center" type="button" data-drawer-target="drawer-example"
+          data-drawer-show="drawer-example" aria-controls="drawer-example">
+          <i class="fas fa-list-ul bg-white rounded-full w-6 h-6 flex items-center justify-center text-sm"></i>
+          <span class="text-white text-xs">Menu</span>
+        </button>
+
+        <div id="drawer-example"
+          class="fixed top-[14vh] left-0 z-[9999] h-[86vh] p-2 overflow-y-auto transition-transform -translate-x-full bg-[#f5f7f9] w-96"
+          tabindex="-1" aria-labelledby="drawer-label">
+          <div class="flex justify-between items-center px-2 mb-4">
+            <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example">
+              <i class="fa-solid fa-chevron-left text-3xl"></i>
+            </button>
+            <h1 id="drawer-label" class="text-3xl">Catagories</h1>
+            <button type="button" data-drawer-hide="drawer-example" aria-controls="drawer-example">
+              <i class="fa-solid fa-xmark text-3xl"></i>
+            </button>
+          </div>
+          <!--Catagories-->
+          <ul class="sidebar-menu my-3">
+            <li class="drawer-menu-items">
+              <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+            </li>
+            <li class="drawer-menu-items">
+              <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+            </li>
+            <li>
+              <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+            </li>
+          </ul>
+
+          <!--Top Catagories-->
+          <div>
+            <h1 class="text-3xl">Top Catagories</h1>
+            <ul class="sidebar-menu my-3">
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Trending</span></a>
+              </li>
+            </ul>
+          </div>
+          <!--Help & Settings-->
+          <div>
+            <h1 class="text-3xl">My account help & Settings</h1>
+            <ul class="sidebar-menu my-3">
+              <li>
+                <a href="#"><img src="images/trending.png" alt="" /><span>Sign In</span></a>
+              </li>
+            </ul>
+            <a href="#">
+              <button type="button"
+                class="text-white bg-green-600 w-full hover:text-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 text-left me-2 mb-2">
+                <h1 class="text-2xl">Become a Seller</h1>
+                <span>Create a Tatamax Account</span>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-menu">
+        <ul class="flex text-white">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Trending</a></li>
+          <li><a href="#">All Brands</a></li>
+          <li><a href="#">Shop</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="mx-auto px-10">
+    <!-- Banner Section-->
+    <section class="relative mb-80">
+      <!-- carousel start-->
+      <div id="controls-carousel" class="relative w-full mt-5" data-carousel="static">
+        <!-- Carousel wrapper -->
+        <div class="relative h-[600px] overflow-hidden rounded-lg banner-carousel">
+          <!-- Item 1 -->
+          <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+            <a href="#">
+              <img src="images/banner-img1.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." /></a>
+          </div>
+          <!-- Item 2 -->
+          <div class="hidden duration-700 ease-in-out h-full" data-carousel-item="active">
+            <a href="#"><img src="images/banner-img2.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." /></a>
+          </div>
+          <!-- Item 3 -->
+          <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+            <a href="#">
+              <img src="images/banner-img3.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." /></a>
+          </div>
+          <!-- Item 4 -->
+          <div class="hidden duration-700 ease-in-out h-full" data-carousel-item>
+            <a href="#"><img src="images/banner-img2.jpg"
+                class="absolute block w-full h-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." /></a>
+          </div>
+        </div>
+        <!-- Slider controls -->
+        <button type="button"
+          class="absolute top-0 start-0 z-[999] flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-prev>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 1 1 5l4 4" />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+        <button type="button"
+          class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+          data-carousel-next>
+          <span
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="m1 9 4-4-4-4" />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+
+      <!-- carousel end-->
+
+      <div class="grid grid-cols-2 absolute -bottom-80 z-30 px-5 gap-5">
+        <div class="grid grid-cols-2 gap-5 h-full">
+          <a href="#"
+            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+            <span
+              class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+              Vape</span>
+            <img src="images/disposable.jpg" alt="" class="object-cover h-full w-full" />
+          </a>
+          <a href="#"
+            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+            <span
+              class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+              Vape</span>
+            <img src="images/disposable.jpg" alt="" class="object-cover h-full w-full" />
+          </a>
+        </div>
+
+        <div class="flex flex-col gap-5 h-full">
+          <a href="#"
+            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+            <span
+              class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+              Vape</span>
+            <img src="images/health&beauty.jpg" alt="" class="object-cover h-full w-full" />
+          </a>
+          <a href="#"
+            class="flex justify-center items-center h-full relative group transition-all duration-300 rounded-lg overflow-hidden">
+            <span
+              class="p-3 bg-gradient-to-b from-white/70 to-transparent w-full h-full absolute top-0 left-0 text-2xl font-semibold group-hover:text-blue-600">Diposable
+              Vape</span>
+            <img src="images/health&beauty.jpg" alt="" class="object-cover h-full w-full" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!--Product Categories Section-->
+    <section>
+      <h1 class="text-2xl font-bold py-3">
+        Store.
+        <span class="text-gray-500">The best way to buy <br />
+          the products</span>
+        categories
+        <span class="text-gray-500">you love.</span>
+      </h1>
+
+      <div class="slider-responsive py-5">
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+        <div class="text-center">
+          <img src="images/electronics.jpg" alt="Image 1" />
+          <h1>Men's Grooming</h1>
+        </div>
+      </div>
+    </section>
+
+    <!--Best Sellers Section-->
+    <section>
+      <h1 class="text-2xl font-bold py-5">
+        Best Sellers
+        <span class="text-gray-500">
+          Our most popular products based on sales. <br />Updated
+          frequently.</span>
+      </h1>
+
+      <div class="slider-responsive2 py-5">
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Top Deal Section-->
+    <section>
+      <h1 class="text-2xl font-bold py-3">Top Deal</h1>
+      <div class="slider-responsive2 py-5">
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hot Release Section-->
+    <section>
+      <h1 class="text-2xl font-bold py-5 text-center">
+        Our hot new releases<br />
+
+        <span class="text-gray-500"> Updated frequently.</span>
+      </h1>
+
+      <div class="hot-carousel relative">
+        <img src="images/hot-release.jpg" alt="" />
+        <div class="slider-responsive2 hot py-5">
+          <div
+            class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+            <div
+              class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+              <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+                class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+            </div>
+
+            <img src="images/bloody-marry.jpeg" alt="" />
+
+            <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+            <div>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>0</span>
+            </div>
+
+            <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+            <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+          </div>
+          <div
+            class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+            <div
+              class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+              <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+                class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+            </div>
+
+            <img src="images/bloody-marry.jpeg" alt="" />
+
+            <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+            <div>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>0</span>
+            </div>
+
+            <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+            <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+          </div>
+          <div
+            class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+            <div
+              class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+              <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+                class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+            </div>
+
+            <img src="images/bloody-marry.jpeg" alt="" />
+
+            <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+            <div>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>0</span>
+            </div>
+
+            <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+            <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+          </div>
+          <div
+            class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+            <div
+              class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+              <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+                class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+            </div>
+
+            <img src="images/bloody-marry.jpeg" alt="" />
+
+            <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+            <div>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>0</span>
+            </div>
+
+            <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+            <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+          </div>
+          <div
+            class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+            <div
+              class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+              <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+                class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+            </div>
+
+            <img src="images/bloody-marry.jpeg" alt="" />
+
+            <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+            <div>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>0</span>
+            </div>
+
+            <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+            <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+          </div>
+          <div
+            class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+            <div
+              class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+              <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+                class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+            </div>
+
+            <img src="images/bloody-marry.jpeg" alt="" />
+
+            <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+            <div>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>0</span>
+            </div>
+
+            <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+            <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+          </div>
+          <div
+            class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+            <div
+              class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+              <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+                class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+            </div>
+
+            <img src="images/bloody-marry.jpeg" alt="" />
+
+            <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+            <div>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+              <span>0</span>
+            </div>
+
+            <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+            <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Just For You -->
+    <section>
+      <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-bold py-5">
+          Just For You<br />
+
+          <span class="text-gray-500"> is one of our best-selling ranges</span>
+        </h1>
+
+        <a href="#" class="text-center text-2xl font-medium">
+          <h1>Browse All</h1>
+          <i class="fas fa-arrow-right-long"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-6 gap-y-3">
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+        <div
+          class="card text-center p-3 relative overflow-hidden group border-2 hover:border-blue-600 border-transparent transition-all duration-300">
+          <div
+            class="absolute top-3 -right-20 group-hover:right-3 transition-all duration-300 flex flex-col gap-3 text-gray-500">
+            <i class="fas fa-heart w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i><i
+              class="fa-solid fa-right-left w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-md"></i>
+          </div>
+
+          <img src="images/bloody-marry.jpeg" alt="" />
+
+          <h1 class="font-medium py-2">Bloody Mary BM600 Disposable Vape</h1>
+
+          <div>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <span>0</span>
+          </div>
+
+          <h2 class="font-bold text-2xl text-red-500 py-2">৳586.76</h2>
+
+          <button class="bg-gray-200 w-full p-2">UK Free delivery</button>
+        </div>
+      </div>
+    </section>
+
+    <!--Unique Gift Ideas Section-->
+    <section class="flex flex-col items-center justify-center p-6 bg-gray-50 dark:bg-gray-800">
+      <h1 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">
+        Get unique gift ideas and so much more delivered right to your inbox.
+      </h1>
+
+      <div class="flex space-x-4 mb-6">
+        <div class="flex items-center">
+          <input id="option1" type="radio" name="subscription-option"
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600">
+          <label for="option1" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Option 1</label>
+        </div>
+        <div class="flex items-center">
+          <input id="option2" type="radio" name="subscription-option" checked
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600">
+          <label for="option2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Option 2</label>
+        </div>
+      </div>
+
+      <div class="w-full max-w-md">
+        <form class="flex">
+          <div class="flex relative w-full max-w-md">
+            <input type="email" id="email"
+              class="flex-1 p-4 pr-24 text-sm text-gray-900 border border-gray-300 rounded-full bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Enter your email" />
+            <button type="submit"
+              class="absolute right-0 top-0 h-full px-6 bg-blue-700 text-white rounded-tr-full rounded-br-full hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              Subscribe
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <!--Story Section-->
+    <section>
+      <div class="flex flex-col gap-3 justify-center items-center mx-[38%] my-8">
+        <h1 class="font-bold text-3xl">What’s your story?</h1>
+        <img class="w-[350px] h-[250px]" src="https://tatamax.com/public//assets/img/footer_img.png" alt="">
+        <p class="text-2xl">Let us help you grow your business</p>
+        <div class="flex flex-row gap-3">
+          <p class="basis-1/2">Everyone has goals and ambitions, small ones, big ones, even crazy ones.</p>
+          <p class="basis-1/2">Set-up your business goal and let us take care of the rest.</p>
+        </div>
+        <div class="flex flex-row justify-center items-center gap-x-10">
+          <button type="button"
+            class="bg-lime-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white w-[90%]">Register To Sell</button>
+          <button type="button"
+            class="bg-lime-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center text-white w-[90%]">Seller Login Portal</button>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div>
+        <div>
+          
+        </div>
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+  </footer>
+
+
+  <!-- all js -->
+
+  <!-- flowbite -->
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+
+  <!-- slick -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
