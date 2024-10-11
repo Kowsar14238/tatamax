@@ -94,3 +94,35 @@ header {
   margin-top: -150px;
   z-index: 99;
 }
+
+/* tooltip */
+
+.fa-heart,
+.fa-right-left {
+  position: relative;
+}
+.fa-heart::after {
+  content: "Save to basket";
+}
+.fa-right-left::after {
+  content: "Compare";
+}
+.fa-heart::after,
+.fa-right-left::after {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  padding: 5px;
+  border-radius: 2px;
+  opacity: 0;
+  width: max-content;
+  background: black;
+  color: #fff;
+  position: absolute;
+  right: 40px;
+}
+
+.fa-heart:hover::after,
+.fa-right-left:hover::after {
+  opacity: 1;
+}
+
