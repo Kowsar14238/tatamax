@@ -1,20 +1,27 @@
+button:focus,
+input:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
 /* menu */
 header {
   position: sticky;
   z-index: 9999 !important;
 }
+
 .main-menu ul li {
   padding: 6px 10px;
   border: 1px solid transparent;
   border-radius: 3px;
   transition: 0.3s;
 }
-.main-menu ul li:hover{
+.main-menu ul li:hover {
   border: 1px solid white;
 }
 .sidebar-menu li {
   padding: 6px 5px;
-  border-bottom: 1px solid #fff;
+  border: 1px solid transparent;
   border-radius: 3px;
   font-size: 18px;
   transition: 0.3s;
@@ -37,21 +44,7 @@ header {
 }
 
 /* banner */
-.banner-carousel::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 99;
-  background: linear-gradient(
-    to bottom,
-    transparent,
-    #ffffff23 70%,
-    white 100%
-  );
-}
+
 .hot-carousel::before {
   position: absolute;
   content: "";
@@ -95,6 +88,13 @@ header {
   z-index: 99;
 }
 
+.slick-next {
+  right: -15px !important;
+  z-index: 99 !important;
+}
+.slick-prev {
+  z-index: 99 !important;
+}
 /* tooltip */
 
 .fa-heart,
@@ -126,3 +126,69 @@ header {
   opacity: 1;
 }
 
+.card-img {
+  overflow: hidden;
+}
+.card-img img {
+  transition: 2s ease;
+}
+
+.card:hover .card-img img {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+}
+
+.card .icon-overlay i:hover {
+  color: #fff;
+  background-color: rgb(3, 99, 255);
+  transition: 0.3s;
+}
+
+/* footer */
+
+.footer-top ul li a {
+  position: relative;
+}
+.footer-top ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  border-radius: 5px;
+  height: 0.05em;
+  bottom: 0;
+  left: 0;
+  background: currentcolor;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.footer-top ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 640px) and (max-width: 767.98px) {
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 639.98px) {
+  .slick-prev {
+    left: -10px !important;
+  }
+  .slick-next {
+    right: -5px !important;
+  }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+}
+
+/*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {
+}
