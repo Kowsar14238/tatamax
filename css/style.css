@@ -9,7 +9,6 @@ header {
   position: sticky;
   z-index: 9999 !important;
 }
-
 .main-menu ul li {
   padding: 6px 10px;
   border: 1px solid transparent;
@@ -26,7 +25,6 @@ header {
   font-size: 18px;
   transition: 0.3s;
 }
-
 .sidebar-menu li a img {
   width: 40px;
   height: 40px;
@@ -36,7 +34,6 @@ header {
   border: 1px solid #185abc;
   color: #185abc;
 }
-
 .sidebar-menu li a {
   display: flex;
   align-items: center;
@@ -44,7 +41,6 @@ header {
 }
 
 /* banner */
-
 .hot-carousel::before {
   position: absolute;
   content: "";
@@ -57,7 +53,6 @@ header {
 }
 
 /* slider-responsive */
-
 .slider-responsive img {
   padding: 0 5px;
   border-radius: 10px;
@@ -70,7 +65,6 @@ header {
   box-shadow: 5px 5px 10 px black !important;
   filter: drop-shadow(5px 5px 10 px black) !important;
 }
-
 .slider-responsive2 .slick-prev,
 .slider-responsive2 .slick-next {
   top: 0 !important;
@@ -81,13 +75,11 @@ header {
 .slider-responsive2 .slick-prev {
   margin-right: 40px !important;
 }
-
 .slider-responsive2.hot {
   padding: 10px;
   margin-top: -150px;
   z-index: 99;
 }
-
 .slick-next {
   right: -15px !important;
   z-index: 99 !important;
@@ -95,8 +87,8 @@ header {
 .slick-prev {
   z-index: 99 !important;
 }
-/* tooltip */
 
+/* tooltip */
 .fa-heart,
 .fa-right-left {
   position: relative;
@@ -120,24 +112,20 @@ header {
   position: absolute;
   right: 40px;
 }
-
 .fa-heart:hover::after,
 .fa-right-left:hover::after {
   opacity: 1;
 }
-
 .card-img {
   overflow: hidden;
 }
 .card-img img {
   transition: 2s ease;
 }
-
 .card:hover .card-img img {
   transform: scale(1.15);
   filter: brightness(1.1);
 }
-
 .card .icon-overlay i:hover {
   color: #fff;
   background-color: rgb(3, 99, 255);
@@ -145,7 +133,6 @@ header {
 }
 
 /* footer */
-
 .footer-top ul li a {
   position: relative;
 }
